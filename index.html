@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Онлайн book</title>
+  <style>
+    :root {
+      --bg: #0a0a0c;
+      --text-main: #ffffff;
+      --text-muted: #9ba1a6;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      padding: 20px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow-x: hidden;
+    }
+    .container {
+      width: 100%;
+      max-width: 600px;
+      margin-top: 30px;
+    }
+    
+    /* Анимация появления */
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero {
+      text-align: center;
+      margin-bottom: 40px;
+      animation: slideUp 0.8s ease forwards;
+    }
+    
+    h1 {
+      font-size: 42px;
+      font-weight: 900;
+      letter-spacing: -1px;
+      margin-bottom: 10px;
+      background: linear-gradient(90deg, #fff, #6dd5ed);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .subtitle { font-size: 16px; color: var(--text-muted); }
+    .grid { display: flex; flex-direction: column; gap: 20px; }
+    
+    .card {
+      text-decoration: none;
+      color: white;
+      border-radius: 24px;
+      padding: 30px 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      min-height: 160px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      transition: transform 0.2s;
+      position: relative;
+    }
+    .card:active { transform: scale(0.97); }
+    .card:hover { transform: translateY(-4px); }
+    
+    .card-math { background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); }
+    .card-eng { background: linear-gradient(135deg, #ff416c 0%, #ff4b2b 100%); }
+    .card-bio { background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); }
+
+    .card h2 { font-size: 24px; font-weight: 800; margin-bottom: 6px; }
+    .card p { font-size: 15px; opacity: 0.8; }
+    
+    .card .icon {
+      position: absolute;
+      top: 20px; right: 20px;
+      font-size: 40px;
+      opacity: 0.3;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="hero">
+      <h1>Онлайн book</h1>
+      <div class="subtitle">Ваш удобный сервис с онлайн учебниками</div>
+    </div>
+
+    <div class="grid">
+      <a href="algebra.html" class="card card-math">
+        <span class="icon">📐</span>
+        <h2>Математика</h2>
+        <p>Номера заданий</p>
+      </a>
+
+      <a href="english.html" class="card card-eng">
+        <span class="icon">🇬🇧</span>
+        <h2>Иностранный язык</h2>
+        <p>Учебник и рабочая тетрадь</p>
+      </a>
+
+      <a href="biology.html" class="card card-bio">
+        <span class="icon">🌿</span>
+        <h2>Биология</h2>
+        <p>Параграфы и практика</p>
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>

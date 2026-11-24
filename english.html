@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Английский - Онлайн book</title>
+  <style>
+    :root { --bg: #0a0a0c; --text-main: #ffffff; --text-muted: #9ba1a6; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: system-ui, -apple-system, sans-serif; background-color: var(--bg); color: var(--text-main); padding: 20px; min-height: 100vh; }
+    .container { width: 100%; max-width: 600px; margin: 0 auto; }
+    .back-btn { display: inline-block; text-decoration: none; color: var(--text-muted); font-size: 16px; font-weight: 600; margin-bottom: 30px; padding: 10px 0; }
+    h1 { font-size: 36px; font-weight: 900; margin-bottom: 20px; color: #ff4b2b; }
+    .list-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)); gap: 12px; }
+    .list-item { background: #1c1c1e; border-radius: 16px; padding: 20px; text-align: center; font-size: 18px; font-weight: 700; text-decoration: none; color: white; border: 1px solid #333; transition: 0.2s; }
+    .list-item:hover { border-color: #ff4b2b; color: #ff4b2b; transform: translateY(-2px); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="index.html" class="back-btn">← Назад на главную</a>
+    <h1>Иностранный язык</h1>
+    <p style="color: grey; margin-bottom: 20px;">Выберите страницу учебника:</p>
+    
+    <div class="list-grid">
+      <a href="#" class="list-item" onclick="alert('Страница 10 скоро появится!')">Стр. 10</a>
+      <a href="#" class="list-item" onclick="alert('Страница 11 скоро появится!')">Стр. 11</a>
+      <a href="#" class="list-item" onclick="alert('Страница 12 скоро появится!')">Стр. 12</a>
+    </div>
+  </div>
+</body>
+</html>
